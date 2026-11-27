@@ -348,6 +348,7 @@ def portfolio_page():
     st.divider()
     checkin_section(companies)
     delete_section(companies)
+    clear_section(companies)
 
 
 def empty_state():
@@ -371,6 +372,21 @@ def checkin_section(companies):
         flash(f"Check-in logged: {names[company_id]}")
         bump()
         st.rerun()
+
+
+def clear_section(companies):
+    with st.expander("Clear all data"):
+        st.markdown(f"This permanently deletes all {plural(len(companies))} and all PMF data. "
+                    "It can't be undone, so use **Export CSV** first if you want a copy.")
+        typed = st.text_input("Type CLEAR to confirm", key=f"clear_confirm_{st.session_state.get('ver', 0)}",
+                              placeholder="CLEAR")
+        if st.button("Clear all data", disabled=typed.strip() != "CLEAR", key="clear_all"):
+            db.clear_all()
+            for key in ("pmf_company", "pmf_picker"):
+                st.session_state.pop(key, None)
+            flash("All data cleared")
+            bump()
+            st.rerun()
 
 
 def delete_section(companies):

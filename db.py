@@ -149,6 +149,13 @@ def delete_company(company_id):
         conn.execute("DELETE FROM companies WHERE id = ?", (company_id,))
 
 
+def clear_all():
+    """Delete every company and all PMF data, in one transaction."""
+    with connect() as conn:
+        conn.execute("DELETE FROM pmf")
+        conn.execute("DELETE FROM companies")
+
+
 # ---------------------------------------------------------------- PMF
 
 def get_pmf(company_id):

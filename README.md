@@ -43,6 +43,8 @@ Data storage on Community Cloud - please read before inviting testers:
   when you rename a company in the table). Check-in dates can't be in the future.
 - **Log a check-in** sets a company's last check-in to today in one click.
 - **Delete a company** is in an expander and needs a confirmation tick.
+- **Clear all data** (expander at the bottom) deletes every company and all PMF data after you type
+  CLEAR to confirm. It can't be undone; use Export CSV first to keep a copy.
 - **Import CSV** and **Export CSV** (top right). Export and the downloadable template use the same 21
   columns: the 10 core columns, then Country, Status, PMF stage,
   Founder's focus, Target market, Customer conversations (30 days), Experiments this quarter, PMF evidence,
