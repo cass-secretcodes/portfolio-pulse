@@ -1,0 +1,41 @@
+# Visual theme. Colour values mirror the tokens in styles.py - change both together.
+
+[theme]
+base = "dark"
+primaryColor = "#607196"
+backgroundColor = "#141A26"
+secondaryBackgroundColor = "#1B2230"
+textColor = "#E8ECF4"
+linkColor = "#8EA0C7"
+linkUnderline = false
+borderColor = "#2E384C"
+showWidgetBorder = true
+baseRadius = "4px"
+buttonRadius = "4px"
+dataframeBorderColor = "#2E384C"
+dataframeHeaderBackgroundColor = "#1B2230"
+font = "IBM Plex Sans:https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap, sans-serif"
+baseFontWeight = 400
+headingFont = "IBM Plex Sans:https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap, sans-serif"
+headingFontSizes = ["1.75rem", "1.25rem", "1.05rem"]
+headingFontWeights = [600, 600, 600]
+# Status colours, used by the Status pills in the Portfolio table
+greenColor = "#5CBF93"
+orangeColor = "#E0A93B"
+redColor = "#E27A7A"
+greenTextColor = "#5CBF93"
+orangeTextColor = "#E0A93B"
+redTextColor = "#E27A7A"
+greenBackgroundColor = "#5CBF9326"
+orangeBackgroundColor = "#E0A93B26"
+redBackgroundColor = "#E27A7A26"
+
+[client]
+toolbarMode = "minimal"
+
+[server]
+headless = true
+runOnSave = true
+
+[browser]
+gatherUsageStats = false

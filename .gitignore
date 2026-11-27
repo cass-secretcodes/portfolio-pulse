@@ -1,0 +1,16 @@
+# Local data - never commit company data
+portfolio.db
+*.db
+*.csv
+
+# Secrets
+.env
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# macOS
+.DS_Store
